@@ -820,13 +820,11 @@ a {
     transform: translate(0, 0);
 }
 
-/* === Responsive Design === */
+/* === Responsive Design — Desktop-like on all screens === */
 @media (max-width: 1024px) {
     .hero {
-        flex-direction: column;
-        gap: 3rem;
-        padding: 7rem 3rem 3rem;
-        text-align: center;
+        gap: 4rem;
+        padding: 7rem 3rem 4rem;
     }
 
     .hero-image-frame {
@@ -834,114 +832,334 @@ a {
         height: 420px;
     }
 
-    .hero-decorative-line {
-        display: none;
-    }
-
-    .hero-scroll-indicator {
-        justify-content: center;
-    }
-
     .editorial-section {
-        flex-direction: column !important;
         gap: 2.5rem;
         padding: 4rem 2rem;
-    }
-
-    .editorial-section::before {
-        display: none;
-    }
-
-    .editorial-text {
-        text-align: center;
-        max-width: 500px;
-    }
-
-    .editorial-heading::after {
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .editorial-image {
         max-width: 350px;
     }
-
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .gallery-tall {
-        grid-row: span 1;
-        aspect-ratio: 3/4;
-    }
 }
 
 @media (max-width: 768px) {
     .nav {
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .nav-brand {
+        font-size: 1.4rem;
     }
 
     .nav-links {
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
 
     .nav-links a {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.1em;
     }
 
     .hero {
-        padding: 6rem 1.5rem 2rem;
+        gap: 2rem;
+        padding: 6rem 1.2rem 3rem;
     }
 
     .hero-image-frame {
-        width: 260px;
-        height: 360px;
+        width: 200px;
+        height: 280px;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .hero-decorative-line {
+        top: -20px;
+        right: -20px;
+        height: calc(100% + 40px);
+    }
+
+    .name-line {
+        font-size: clamp(2.2rem, 8vw, 4rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.9rem;
+    }
+
+    .hero-scroll-indicator {
+        margin-top: 2rem;
+    }
+
+    .editorial-section {
+        gap: 1.5rem;
+        padding: 3rem 1.2rem;
+    }
+
+    .editorial-text {
+        max-width: 45%;
+        flex: 1;
+    }
+
+    .editorial-heading {
+        font-size: 0.6rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .editorial-body {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .editorial-image {
+        flex: 1;
+        max-width: 45%;
     }
 
     .gallery-section {
-        padding: 5rem 1.5rem;
+        padding: 4rem 1rem;
+    }
+
+    .gallery-header {
+        margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.6rem;
+    }
+
+    .gallery-item-overlay {
+        padding-bottom: 0.8rem;
+    }
+
+    .gallery-item-overlay span {
+        font-size: 0.75rem;
     }
 
     .quote-section {
-        padding: 5rem 1.5rem;
+        padding: 4rem 1.2rem;
+    }
+
+    .quote-mark {
+        font-size: 4rem;
     }
 
     .quote-text {
-        font-size: 1.15rem;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .quote-author {
+        font-size: 0.65rem;
+    }
+
+    .love-section {
+        padding: 4rem 1.2rem;
+    }
+
+    .love-note {
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .lightbox-close {
+        top: 1rem;
+        right: 1.2rem;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
+    .nav {
+        padding: 0.8rem 1rem;
+    }
+
     .nav-brand {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .nav-links {
-        gap: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 0.65rem;
-        letter-spacing: 0.1em;
-    }
-
-    .hero-image-frame {
-        width: 220px;
-        height: 310px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
     }
 
+    .nav-links a {
+        font-size: 0.5rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero {
+        gap: 1.5rem;
+        padding: 5rem 0.8rem 2rem;
+    }
+
+    .hero-image-frame {
+        width: 150px;
+        height: 210px;
+    }
+
+    .hero-decorative-line {
+        top: -10px;
+        right: -10px;
+        height: calc(100% + 20px);
+    }
+
+    .name-line {
+        font-size: clamp(1.8rem, 9vw, 3rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.5rem;
+        letter-spacing: 0.2em;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem;
+    }
+
+    .hero-scroll-indicator {
+        margin-top: 1.5rem;
+    }
+
+    .hero-scroll-indicator span {
+        font-size: 0.55rem;
+    }
+
+    .scroll-line {
+        width: 40px;
+    }
+
+    .editorial-section {
+        gap: 1rem;
+        padding: 2rem 0.8rem;
+    }
+
+    .editorial-section::before {
+        opacity: 0.2;
+    }
+
+    .editorial-text {
+        max-width: 48%;
+    }
+
+    .editorial-heading {
+        font-size: 0.5rem;
+        letter-spacing: 0.2em;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .editorial-heading::after {
+        width: 20px;
+    }
+
+    .editorial-body {
+        font-size: 0.7rem;
+        line-height: 1.6;
+    }
+
+    .editorial-image {
+        max-width: 48%;
+    }
+
+    .image-accent {
+        transform: translate(8px, 8px);
+    }
+
+    .image-card:hover .image-accent {
+        transform: translate(10px, 10px);
+    }
+
+    .gallery-section {
+        padding: 3rem 0.6rem;
+    }
+
+    .gallery-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .gallery-subtitle {
+        font-size: 0.55rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.4rem;
+    }
+
+    .gallery-item {
+        border-radius: 2px;
+    }
+
+    .gallery-item-overlay {
+        padding-bottom: 0.4rem;
+    }
+
+    .gallery-item-overlay span {
+        font-size: 0.55rem;
+    }
+
+    .quote-section {
+        padding: 3rem 0.8rem;
+    }
+
+    .quote-mark {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .quote-text {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .quote-author {
+        margin-top: 1rem;
+        font-size: 0.55rem;
+    }
+
     .love-section {
-        padding: 5rem 1.5rem;
+        padding: 3rem 0.8rem;
+    }
+
+    .love-script {
+        font-size: 1.8rem;
+    }
+
+    .love-name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .love-note {
+        font-size: 0.8rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .heart {
+        font-size: 1rem;
+    }
+
+    .heart:nth-child(2) {
+        font-size: 1.4rem;
+    }
+
+    .footer {
+        padding: 1.2rem;
+        font-size: 0.6rem;
+    }
+
+    .timeline-line {
+        display: block;
     }
 }
 
